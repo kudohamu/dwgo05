@@ -14,6 +14,7 @@ import (
 func download(url string) {
 	tmp := strings.Split(url, "/")
 	fileName := tmp[len(tmp)-1]
+	fmt.Println("'" + fileName + "' download...")
 
 	response, err := http.Get(url)
 	if err != nil {
